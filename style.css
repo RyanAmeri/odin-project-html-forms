@@ -1,0 +1,29 @@
+html {
+    /* border-box box model allows us to add padding and border to our elements without increasing their size */
+    box-sizing: border-box;
+    font-family: "AvenirNext", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: left;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  :root {
+    --main-color: #4C4C4C;
+    --second-color: #505050;
+    --link-color: #0077c5;
+    --warning-color: #EA7F00;
+    --background-color: #EEECF1;
+  }
+
+  a {
+      color: var(--link-color);
+  }
+  body {
+      color: var(--main-color);
+  }
