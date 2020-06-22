@@ -14,7 +14,8 @@
 </head>
 <body>
     <script src="script.js"></script>
-    <div id="window">
+    <div id="wndw">
+        <!-- START OF HEADER -->
         <header>
             <div class="class1">
                 <div id="three">Already have an Intuit account?</div>
@@ -26,6 +27,7 @@
                     Sign In</button>
             </div>
         </header>
+        <!-- START OF LOGO SECTION-->
         <section class="biglogo">
             <div class="anim"></div>
             <ul id="smalllogos">
@@ -43,7 +45,43 @@
                 </a>
             </ul>
         </section>
-        <section></section>
+        <!--START OF MAIN FORM-->
+        <article class="mainform">
+           <section id="title">
+            Create an Intuit account
+           </section>
+           <section id="desc">
+               One account for everything Intuit, including Mint.<br>
+               <a href="https://accounts-help.lc.intuit.com/questions/1582580-creating-an-account">Learn more</a>
+           </section>
+           <section id="email">
+               <form id="mnForm" action="" method="">
+                <fieldset id="emailField">
+                    <label id="label-email" for="field-email">Email address</label>
+                    <input id="field-email" class="text-input" placeholder="You'll verify this later" maxlength="100" type="email" aria-required="true" required="required" autocomplete="off">
+                    <div id="emailError">
+                        Hello
+                    </div>
+                </fieldset>
+           </section>
+           <section>
+            <fieldset id="phoneField">
+                <label id="label-phone" for="field-phone">Phone (recommended)</label>
+                <input id="field-phone" autocomplete="off" placeholder="Helps with lost passwords and security" type="tel" class="text-input" maxlength="30">
+                <div id="phoneError">
+                    Hello
+                </div>
+            </fieldset>
+           </section>
+           <section></section>
+           <section></section>
+           <section>
+
+                </form>
+           </section>
+           <section></section>
+           <section></section>
+        </article>
         <footer></footer>
     </div>
 </body>

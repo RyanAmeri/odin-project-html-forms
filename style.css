@@ -21,6 +21,7 @@ html {
     --link-color: #0077c5;
     --warning-color: #EA7F00;
     --background-color: #EEECF1;
+    --border-color: #C1C5C8;
   }
 
   a {
@@ -31,20 +32,27 @@ html {
   }
   a:visited {
     color: var(--second-color);
+    text-decoration: none;
   }
+  a:link {
+    text-decoration: none;
+  }
+
+
   body {
       color: var(--main-color);
       background: var(--background-color);
   }
 /* wrapper div containing everything */
 
-  #window {
+  #wndw {
       display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 60px 117px 671px 117px;
+      grid-template-columns: minmax(380px, 1fr);
+      grid-template-rows: 60px 117px minmax(671px,1fr) 117px;
       place-items: center center;
       padding-right: 30px;
       padding-left: 30px;
+      overflow: hidden;
   }
 
   /**************** HEADER *******************/
@@ -97,6 +105,7 @@ html {
     display: grid;
     grid-template-rows: 75px 42px;
     place-items: center center;
+    padding-bottom: 15px;
 }
 
 .anim {
@@ -121,12 +130,10 @@ html {
 }
 
 #smalllogos a:link {
-    text-decoration: none;
     color: var(--second-color);
 }
   
 #smalllogos a:visited {
-    text-decoration: none;
     color: var(--second-color);
 }
 
@@ -212,4 +219,80 @@ html {
         left: 0;
         opacity: 100%;
     }
+}
+
+/********** START OF MAIN FORM **********/
+
+.mainform {
+    background: white;
+    border: 1px solid var(--border-color);
+    width: 380px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    place-items: center center;
+    align-self: start;
+
+}
+#title {
+    font-size: 2.4rem;
+    line-height: 1.1;
+}
+#desc {
+    display: grid;
+    place-items: center center;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    font-weight: 300;
+}
+#desc a {
+    font-size: 1.2rem;
+}
+
+
+label {
+    padding-bottom: 10px;
+}
+.text-input {
+    border: 1px solid var(--border-color);
+    height: 34px;
+    width: 320px;
+    min-width: 160px;
+    padding-left: 8px;
+    padding-right: 6px;
+    color: #000000;
+    outline: none;
+    font-size: 1.68rem;
+    border-radius: 3px;
+    line-height: 1.56rem;
+}
+form {
+    padding: 0;
+    border: none;
+    margin: none;
+    font-size: 1.4rem;
+}
+fieldset {
+    padding: 0;
+    border: none;
+    display: grid;
+}
+
+/* 
+#emailError.visible {
+    visibility: visible;
+} */
+
+#emailError {
+    display: block; 
+    text-align: left;
+    color: #eb3432;
+    margin: 5px 0;
+    visibility: hidden; 
+    line-height: 1.44em;
+    height: 20px;
+}
+#phoneError {
+    
 }
