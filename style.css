@@ -263,6 +263,16 @@ label {
     border-radius: 3px;
     line-height: 1.56rem;
 }
+/* .glowing-border {
+    border: 2px solid #dadada;
+    border-radius: 7px;
+} */
+
+.text-input:focus { 
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
 form {
     display: grid;
     grid-template-columns: 1fr;
@@ -332,7 +342,8 @@ fieldset {
     z-index: 1;
 }
   
-  /* Show the tooltip text when you mouse over the tooltip container */
+  /* Show the tooltip text when the input field has focus */
+  /* this uses css next item selector foound at https://stackoverflow.com/questions/17419945/display-tooltip-with-css-only and using help from https://www.w3schools.com/css/css_tooltip.asp for tooltips */
 .emailTooltip input:focus + .emailTooltipText {
     visibility: visible;
 }
