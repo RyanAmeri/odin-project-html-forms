@@ -56,7 +56,10 @@
            </fieldset>
             <fieldset id="emailField">
                 <label id="label-email" for="input-email">Email address</label>
-                <input id="input-email" class="text-input" placeholder="You'll verify this later" maxlength="100" type="email" aria-required="true" required="required" autocomplete="off" data-status="unset">
+                <div class="emailTooltip">
+                    <input id="input-email" class="text-input" placeholder="You'll verify this later" maxlength="100" type="email" aria-required="true" required autocomplete="off" data-status="unset">
+                    <span class="emailTooltipText" aria-live="assertive" role="alert" for="input-email">You'll use this as your user ID</span>
+                </div>
                 <div id="emailError">
                     
                 </div>
@@ -70,7 +73,7 @@
             </fieldset>
             <fieldset id="passwordField">
                 <label id="label-password" for="input-password">Password</label>
-                <input id="input-password" autocomplete="new-password" class="text-input" placeholder="​Don't reuse an old password" maxlength="50" type="password" aria-required="true" required="required" >
+                <input id="input-password" autocomplete="new-password" class="text-input" placeholder="​Don't reuse an old password" maxlength="50" type="password" aria-required="true" required >
                 <div id="passwordError">
                     
                 </div>
