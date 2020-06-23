@@ -13,7 +13,6 @@
     <title>Intuit Accounts - Sign Up</title>
 </head>
 <body>
-    <script src="script.js"></script>
     <div id="wndw">
         <!-- START OF HEADER -->
         <header>
@@ -47,42 +46,55 @@
         </section>
         <!--START OF MAIN FORM-->
         <article class="mainform">
-           <section id="title">
+            <form id="mnForm" action="" method="">
+           <fieldset id="title">
             Create an Intuit account
-           </section>
-           <section id="desc">
+           </fieldset>
+           <fieldset id="desc">
                One account for everything Intuit, including Mint.<br>
                <a href="https://accounts-help.lc.intuit.com/questions/1582580-creating-an-account">Learn more</a>
-           </section>
-           <section id="email">
-               <form id="mnForm" action="" method="">
-                <fieldset id="emailField">
-                    <label id="label-email" for="field-email">Email address</label>
-                    <input id="field-email" class="text-input" placeholder="You'll verify this later" maxlength="100" type="email" aria-required="true" required="required" autocomplete="off">
-                    <div id="emailError">
-                        Hello
-                    </div>
-                </fieldset>
-           </section>
-           <section>
-            <fieldset id="phoneField">
-                <label id="label-phone" for="field-phone">Phone (recommended)</label>
-                <input id="field-phone" autocomplete="off" placeholder="Helps with lost passwords and security" type="tel" class="text-input" maxlength="30">
-                <div id="phoneError">
-                    Hello
+           </fieldset>
+            <fieldset id="emailField">
+                <label id="label-email" for="input-email">Email address</label>
+                <input id="input-email" class="text-input" placeholder="You'll verify this later" maxlength="100" type="email" aria-required="true" required="required" autocomplete="off" data-status="unset">
+                <div id="emailError">
+                    
                 </div>
             </fieldset>
-           </section>
-           <section></section>
-           <section></section>
-           <section>
+            <fieldset id="phoneField">
+                <label id="label-phone" for="input-phone">Phone (recommended)</label>
+                <input id="input-phone" autocomplete="off" placeholder="Helps with lost passwords and security" type="tel" class="text-input" maxlength="30">
+                <div id="phoneError">
+                    
+                </div>
+            </fieldset>
+            <fieldset id="passwordField">
+                <label id="label-password" for="input-password">Password</label>
+                <input id="input-password" autocomplete="new-password" class="text-input" placeholder="​Don't reuse an old password" maxlength="50" type="password" aria-required="true" required="required" >
+                <div id="passwordError">
+                    
+                </div>
+            </fieldset>
+           <fieldset id="passwordConfirmField">
+            <label id="label-confirm-password" for="input-confirm-password">Confirm Password</label>
+            <input id="input-confirm-password" class="text-input" maxlength="50" autocomplete="off" type="password" aria-required="true" required="required" data-valid="valid">
+            <div id="passwordConfirmError">
+                    
+            </div>
+           </fieldset>
+           <fieldset id="buttonField">
+               <button>Create Account</button>
+           </fieldset>
+           <fieldset id="disclaim">
 
-                </form>
-           </section>
-           <section></section>
-           <section></section>
+           </fieldset>
+           <fieldset id="captcha">
+
+           </fieldset>
+        </form>
         </article>
         <footer></footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
