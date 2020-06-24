@@ -263,10 +263,6 @@ label {
     border-radius: 3px;
     line-height: 1.56rem;
 }
-/* .glowing-border {
-    border: 2px solid #dadada;
-    border-radius: 7px;
-} */
 
 .text-input:focus { 
     outline: none;
@@ -310,15 +306,7 @@ fieldset {
     line-height: 1.2;
     font-size: 1.2rem;
 }
-#phoneError {
-    display: block; 
-    text-align: left;
-    color: var(--warning-color);
-    margin: 5px 0;
-    visibility: hidden; 
-    line-height: 1.44em;
-    height: 20px;
-}
+
 /* Tooltip container */
 .emailTooltip {
     position: relative;
@@ -346,4 +334,21 @@ fieldset {
   /* this uses css next item selector foound at https://stackoverflow.com/questions/17419945/display-tooltip-with-css-only and using help from https://www.w3schools.com/css/css_tooltip.asp for tooltips */
 .emailTooltip input:focus + .emailTooltipText {
     visibility: visible;
+}
+
+/* .input-email:invalid { 
+    outline: none;
+    border: 1px solid var(--error-color);
+    box-shadow: 0 0 10px var(--error-color);
+    
+} */
+
+#phoneError {
+    display: block; 
+    text-align: left;
+    color: var(--warning-color);
+    margin: 5px 0;
+    visibility: hidden; 
+    line-height: 1.44em;
+    height: 20px;
 }
