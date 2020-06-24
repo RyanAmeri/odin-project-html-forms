@@ -308,13 +308,13 @@ fieldset {
 }
 
 /* Tooltip container */
-.emailTooltip {
+.tooltip {
     position: relative;
     display: inline-block;
 }
   
   /* Tooltip text */
-.emailTooltip .emailTooltipText {
+.tooltip .tooltipText {
     visibility: hidden;
     width: 200px;
     background-color: var(--main-color);
@@ -332,16 +332,11 @@ fieldset {
   
   /* Show the tooltip text when the input field has focus */
   /* this uses css next item selector foound at https://stackoverflow.com/questions/17419945/display-tooltip-with-css-only and using help from https://www.w3schools.com/css/css_tooltip.asp for tooltips */
-.emailTooltip input:focus + .emailTooltipText {
+.tooltip input:focus + .tooltipText {
     visibility: visible;
 }
 
-/* .input-email:invalid { 
-    outline: none;
-    border: 1px solid var(--error-color);
-    box-shadow: 0 0 10px var(--error-color);
-    
-} */
+
 
 #phoneError {
     display: block; 
