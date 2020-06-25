@@ -1,3 +1,4 @@
+
 const inputEmail = document.getElementById('input-email');
 inputEmail.addEventListener('change', (e) => {
     const emailError = document.getElementById('emailError');
@@ -36,20 +37,35 @@ inputEmail.addEventListener('change', (e) => {
 const inputPhone = document.getElementById('input-phone');
 inputPhone.addEventListener('keydown',enforceFormat);
 inputPhone.addEventListener('keyup',formatToPhone);
+inputPhone.addEventListener('change', (e) => { 
+    if( phoneIsValid(inputPhone.value)){
+        
+    }
+});
 
 
 function emailIsValid(string) {
-    const regex = new RegExp('^[^@\s]+@[^@\s\.]+\.[^@\.\s]+$','gi');
-    return regex.test(string);
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(string);
 
 }
+
+function phoneIsValid(num) {
+    const cleanNum = num.replace(/\D/g,'');
+    return cleanNum.length === 10? true : false;
+
+}
+
+
+/******These functions are for formatting phone number. Taken from https://stackoverflow.com/questions/30058927/format-a-phone-number-as-a-user-types-using-pure-javascript  */
+
 
 function isNumericInput(event) {
     const key = event.keyCode;
     return ((key >= 48 && key <= 57) || // Allow number line
         (key >= 96 && key <= 105) // Allow number pad
     );
-};
+}
 
 function isModifierKey(event) {
     const key = event.keyCode;
@@ -85,3 +101,4 @@ function formatToPhone(event){
     else if(input.length > 0){target.value = `(${zip}`;}
 }
 
+/*******************END of phone formating functions */

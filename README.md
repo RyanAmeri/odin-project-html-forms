@@ -8,6 +8,7 @@ The latest iteration of the project can be [viewed at]( https://ryanameri.github
 ## Learnings
 * Inserting small icons by base64 encoding directly in CSS that can be used as element backgrounds 
 * CSS Tooltips using span to position next to the div
+* Styling custom checkbox with CSS
 
 ## Major Refreshers
 * CSS Grid
