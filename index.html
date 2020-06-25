@@ -87,8 +87,13 @@
                 <label id="label-password" for="input-password">Password</label>
                 <div class="tooltip">
                     <input id="input-password" autocomplete="new-password" class="text-input" placeholder="​Don't reuse an old password" maxlength="50" type="password" aria-required="true" required >
-                <div id="passwordError">
-                    
+                    <span class="tooltipText" aria-live="assertive" role="alert" for="input-password">Create a password you've never used before. This will help keep your account safe.</span>
+                <div id="passwordMessage">
+                    <p id="msg1">Use 8 or more characters</p>
+                    <p id="msg2">Use upper and lower case letters (e.g. Aa)</p>
+                    <p id="msg3">Use a number (e.g. 1234)</p>
+                    <p id="msg4">Use a symbol (e.g. !@#$)</p>
+                    <p id=msg5>Your password is STRONG.</p>
                 </div>
             </fieldset>
            <fieldset id="passwordConfirmField">

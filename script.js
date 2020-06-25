@@ -1,4 +1,4 @@
-
+let passwordIsStrong = false;
 const inputEmail = document.getElementById('input-email');
 inputEmail.addEventListener('change', (e) => {
     const emailError = document.getElementById('emailError');
@@ -101,6 +101,162 @@ inputPhone.addEventListener('focus', (e) => {
     verifyPhone.style.height = "auto";
 
 });
+//Password input field
+const inputPassword = document.getElementById('input-password');
+const passwordMessage = document.getElementById('passwordMessage');
+const msg1 = document.getElementById('msg1');
+const msg2 = document.getElementById('msg2');
+const msg3 = document.getElementById('msg3');
+const msg4 = document.getElementById('msg4');
+const msg5 = document.getElementById('msg5');
+inputPassword.addEventListener('keyup', (e) => {
+    
+    inputPassword.style.outline = "none";
+    inputPassword.style.border = "1px solid #9ecaed";
+    inputPassword.style.boxShadow = "0 0 10px #9ecaed"
+    inputPassword.style.background = "url(assets/password-lock-progress.png)";
+    inputPassword.style.backgroundRepeat = "no-repeat";
+    inputPassword.style.backgroundPosition = "95% 50%";
+    inputPassword.style.backgroundSize = "22px 22px";
+    //Check for number of characters and set msg1 accordingly
+    if (checkPasswordMsg1(inputPassword.value)) {
+        passwordElementYes(msg1);
+    } 
+    // If not 8 characters
+    else {
+        passwordElementNo(msg1);
+    }
+    // Check for presence of both uppercase and lowercase
+    if (checkPasswordMsg2(inputPassword.value)) {
+        passwordElementYes(msg2);
+    } 
+    // Both cases are not present
+    else {
+        passwordElementNo(msg2);
+    }
+    if (checkPasswordMsg3(inputPassword.value)) {
+        passwordElementYes(msg3);
+    } 
+    // there are no numbers
+    else {
+        passwordElementNo(msg3);
+    } 
+    if (checkPasswordMsg4(inputPassword.value)) {
+        passwordElementYes(msg4);
+    } 
+    // there are no symbols
+    else {
+        passwordElementNo(msg4);
+    } 
+
+    //If all tests pass, set for success
+    if (checkPasswordMsg1(inputPassword.value) && checkPasswordMsg2(inputPassword.value) && checkPasswordMsg3(inputPassword.value) && checkPasswordMsg4(inputPassword.value)){
+        passwordStrongStyle(true);
+        passwordIsStrong = true;
+    }
+    else {
+        passwordStrongStyle(false);
+        passwordIsStrong = false;
+    }
+
+});
+
+function passwordStrongStyle(value){
+    //if password is strong
+    if (value){
+        inputPassword.style.background = "url(assets/password-lock-success.png)";
+        inputPassword.style.backgroundRepeat = "no-repeat";
+        inputPassword.style.backgroundPosition = "95% 50%";
+        inputPassword.style.backgroundSize = "22px 22px";
+        msg5.textContent = "Your password is STRONG."
+        msg5.style.color = "var(--pass-color)";
+        msg5.style.fontSize = "1.2rem";
+        msg5.style.lineHeight = "1.2";
+        msg5.style.background = "none";
+        msg5.style.visibility = "visible";
+        msg1.style.visibility = "hidden";
+        msg2.style.visibility = "hidden";
+        msg3.style.visibility = "hidden";
+        msg4.style.visibility = "hidden";
+        msg1.style.height = 0;
+        msg2.style.height = 0;
+        msg3.style.height = 0;
+        msg4.style.height = 0;
+    }
+    //password is not good 
+    else {
+        msg5.style.visibility = "hidden";
+        msg1.style.visibility = "visible";
+        msg2.style.visibility = "visible";
+        msg3.style.visibility = "visible";
+        msg4.style.visibility = "visible";
+        msg1.style.height = "auto";
+        msg2.style.height = "auto";
+        msg3.style.height = "auto";
+        msg4.style.height = "auto";
+
+    }
+}
+
+//If user leaves password field without strong password, set to error colors
+inputPassword.addEventListener('blur', (e) => {
+    if (!passwordIsStrong){
+        inputPassword.style.background = "url(assets/password-lock-fail.png)";
+        inputPassword.style.backgroundRepeat = "no-repeat";
+        inputPassword.style.backgroundPosition = "95% 50%";
+        inputPassword.style.backgroundSize = "22px 22px";
+        inputPassword.style.outline = "none";
+        inputPassword.style.border = "1px solid var(--error-color)";
+        inputPassword.style.boxShadow = "0 0 10px var(--error-color)";
+
+    } 
+    else { //password is strong
+    inputPassword.style.outline = "none";
+    inputPassword.style.border = "1px solid var(--border-color)";
+    inputPassword.style.boxShadow = "none";
+
+    }
+
+});
+
+inputPassword.addEventListener('focus', (e) => { 
+    passwordMessage.style.visibility = "visible";
+});
+
+function passwordElementYes(object){
+    object.style.background = "url(assets/password-validation-yes.png)"
+    object.style.backgroundRepeat = "no-repeat";
+    object.style.backgroundPosition = "0% 50%";
+    object.style.backgroundSize = "10px 10px";
+    object.style.color = "var(--pass-color)";
+
+}
+
+function passwordElementNo(object){
+    object.style.background = "url(assets/password-validation-no.png)"
+    object.style.backgroundRepeat = "no-repeat";
+    object.style.backgroundPosition = "0% 50%";
+    object.style.backgroundSize = "10px 10px";
+    object.style.color = "var(--error-color)";
+
+}
+
+function checkPasswordMsg1(string) {
+    return string.length > 7? true : false;
+}
+
+function checkPasswordMsg2(string) {
+    const re = /(?=.*[a-z])(?=.*[A-Z])/;
+    return re.test(string);
+}
+function checkPasswordMsg3(string) {
+    const re = /(?=.*\d)/;
+    return re.test(string);
+}
+function checkPasswordMsg4(string) {
+    const re = /(?=.*[-+_!@#$%^&*.,?])/
+    return re.test(string);
+}
 
 
 function emailIsValid(string) {

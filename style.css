@@ -23,6 +23,7 @@ html {
     --error-color: #eb3432;
     --background-color: #EEECF1;
     --border-color: #C1C5C8;
+    --pass-color: #51AA4D;
   }
 
   a {
@@ -391,3 +392,34 @@ input[type="checkbox"]:focus + label::before {
       outline: rgb(59, 153, 252) auto 5px;
 }
 /******** END CUSTOM CHECKBOX */
+
+#input-password {
+    background: url(assets/password-lock-open.png);
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    background-size: 22px 22px;
+}
+
+#passwordMessage {
+    padding-top: 20px;
+    visibility: hidden;
+}
+
+#passwordMessage p {
+    margin: 0;
+    padding: 0;
+    padding-top: 3px;
+    font-size: 1.195rem;
+    padding-left: 18px;
+    width: 90%;
+    background: url(assets/password-validation-initial.png);
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    background-size: 12px 12px;
+
+}
+#msg5 {
+    visibility: hidden;
+    background: none;
+    
+}
