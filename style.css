@@ -423,3 +423,12 @@ input[type="checkbox"]:focus + label::before {
     background: none;
     
 }
+#passwordConfirmMessage {
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    font-size: 1.195rem;
+    width: 90%;
+    color: var(--error-color);
+}

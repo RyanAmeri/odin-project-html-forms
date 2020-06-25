@@ -241,6 +241,47 @@ function passwordElementNo(object){
 
 }
 
+//Password Confirm field follows
+const inputPasswordConfirm = document.getElementById('input-confirm-password');
+const passwordConfirmMessage = document.getElementById('passwordConfirmMessage');
+inputPasswordConfirm.addEventListener('keyup', (e) => { 
+    inputPasswordConfirm.style.background = "none";
+    if (inputPasswordConfirm.value === inputPassword.value){
+        inputPasswordConfirm.style.outline = "none";
+        inputPasswordConfirm.style.border = "1px solid var(--border-color)";
+        inputPasswordConfirm.style.boxShadow = "none";
+        inputPasswordConfirm.style.background = "url(assets/verify-true.png)";
+        inputPasswordConfirm.style.backgroundRepeat = "no-repeat";
+        inputPasswordConfirm.style.backgroundPosition = "95% 50%";
+        inputPasswordConfirm.style.backgroundSize = "22px 22px";
+        passwordConfirmMessage.style.visibility = "hidden";
+    }
+});
+
+inputPasswordConfirm.addEventListener('blur', (e) => { 
+    //if passwords do not match
+    if (inputPasswordConfirm.value !== inputPassword.value){
+        inputPasswordConfirm.style.background = "url(assets/verify-false.png)";
+        inputPasswordConfirm.style.backgroundRepeat = "no-repeat";
+        inputPasswordConfirm.style.backgroundPosition = "95% 50%";
+        inputPasswordConfirm.style.backgroundSize = "22px 22px";
+        inputPasswordConfirm.style.outline = "none";
+        inputPasswordConfirm.style.border = "1px solid var(--error-color)";
+        inputPasswordConfirm.style.boxShadow = "0 0 10px var(--error-color)";
+        passwordConfirmMessage.style.visibility = "visible";
+
+    }
+    //if they do match
+    else {
+        inputPasswordConfirm.style.outline = "none";
+        inputPasswordConfirm.style.border = "1px solid var(--border-color)";
+        inputPasswordConfirm.style.boxShadow = "none";
+    }
+
+});
+
+
+
 function checkPasswordMsg1(string) {
     return string.length > 7? true : false;
 }

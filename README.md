@@ -15,3 +15,6 @@ The latest iteration of the project can be [viewed at]( https://ryanameri.github
 * CSS Animations
 
 ## Further Improvements
+* Make the sign in button (at the top) responsive similar to original page
+* make divs hiding and showing less jerky, perhaps use some animations or another method of hiding elements
+* Implement more accessibility in forms, especially in messages. Look up ARIA guidelines. 
