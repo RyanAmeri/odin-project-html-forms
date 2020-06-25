@@ -527,21 +527,37 @@ footer a:visited {
 #footC {
     padding-left: 3px;
 }
-@media (max-width: 360px) {
+@media (max-width: 720px) {
     .tooltip .tooltipText {
         visibility: hidden;
-        width: 200px;
+        width: 150px;
         background-color: var(--main-color);
         color: #fff;
         text-align: center;
-        padding: 10px 0;
-        top: -115%;
-        left: 30%;
+        padding: 0px 0;
+        top: -70%;
+        left: 50%;
         border-radius: 6px;
-       
         /* Position the tooltip text*/
         position: absolute;
         z-index: 1;
+    }
+    #wndw { 
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .mainform {
+        width: 330px;
+    }
+    form {
+        place-items: start start;
+    }
+
+}
+@media (max-width: 420px) { 
+    #wndw { 
+        padding-left: 0;
+        padding-right: 0;
     }
 
 }

@@ -11,6 +11,7 @@ The latest iteration of the project can be [viewed at]( https://ryanameri.github
 * Styling custom checkbox with CSS
 * Showing and hiding divs in JS
 * Input validation using regex
+* Made everything pretty responsive using CSS Grid and some media query breakpoints. Looks good on everything other than the iPhone 5. 
 
 ## Major Refreshers
 * CSS Grid
