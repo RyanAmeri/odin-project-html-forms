@@ -512,3 +512,30 @@ fieldset:last-child {
     text-align: center;
 
 }
+
+/**** End of Form ***/
+footer {
+    display: grid;
+    place-items: center center;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--second-color);
+}
+
+footer a {
+    color: var(--second-color);
+}
+footer a:hover {
+  text-decoration: underline;;
+}
+footer a:visited {
+  color: var(--second-color);
+}
+
+#footer1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+#footC {
+    padding-left: 3px;
+}
