@@ -24,3 +24,4 @@ The latest iteration of the project can be [viewed at]( https://ryanameri.github
 * Implement more accessibility in forms, especially in messages. Look up ARIA guidelines. 
 * The CSS in JS functions could use a lot of refactoring to get rid of redundant code. There is a lot of repetition in there. 
 * The phone number entry should be more responsive to going back and changing, similar to password field. 
+* Make tooltips and logo animations more responsive on mobiles

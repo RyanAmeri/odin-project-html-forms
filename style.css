@@ -49,11 +49,10 @@ html {
 
 #wndw {
       display: grid;
-      grid-template-columns: minmax(380px, 1fr);
+      grid-template-columns: minmax(340px, 1fr);
       grid-template-rows: 60px 117px 1fr 117px;
       place-items: center center;
       padding-right: 30px;
-      padding-left: 30px;
       overflow: hidden;
 }
 
@@ -228,8 +227,8 @@ header {
 .mainform {
     background: white;
     border: 1px solid var(--border-color);
+    min-width: 300px;
     width: 380px;
-    /* padding: 20px; */
     align-self: start;
 }
 #title {
@@ -527,4 +526,22 @@ footer a:visited {
 }
 #footC {
     padding-left: 3px;
+}
+@media (max-width: 360px) {
+    .tooltip .tooltipText {
+        visibility: hidden;
+        width: 200px;
+        background-color: var(--main-color);
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        top: -115%;
+        left: 30%;
+        border-radius: 6px;
+       
+        /* Position the tooltip text*/
+        position: absolute;
+        z-index: 1;
+    }
+
 }
