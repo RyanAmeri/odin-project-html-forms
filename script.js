@@ -102,6 +102,7 @@ inputPhone.addEventListener('focus', (e) => {
 
 });
 //Password input field
+const passwordConfirmField = document.getElementById('passwordConfirmField');
 const inputPassword = document.getElementById('input-password');
 const passwordMessage = document.getElementById('passwordMessage');
 const msg1 = document.getElementById('msg1');
@@ -110,7 +111,7 @@ const msg3 = document.getElementById('msg3');
 const msg4 = document.getElementById('msg4');
 const msg5 = document.getElementById('msg5');
 inputPassword.addEventListener('keyup', (e) => {
-    
+    passwordMessage.style.height = "auto";
     inputPassword.style.outline = "none";
     inputPassword.style.border = "1px solid #9ecaed";
     inputPassword.style.boxShadow = "0 0 10px #9ecaed"
@@ -153,6 +154,8 @@ inputPassword.addEventListener('keyup', (e) => {
     if (checkPasswordMsg1(inputPassword.value) && checkPasswordMsg2(inputPassword.value) && checkPasswordMsg3(inputPassword.value) && checkPasswordMsg4(inputPassword.value)){
         passwordStrongStyle(true);
         passwordIsStrong = true;
+        passwordConfirmField.style.visibility = "visible";
+        passwordConfirmField.style.height = "auto";
     }
     else {
         passwordStrongStyle(false);
@@ -221,6 +224,7 @@ inputPassword.addEventListener('blur', (e) => {
 
 inputPassword.addEventListener('focus', (e) => { 
     passwordMessage.style.visibility = "visible";
+    passwordMessage.style.height = "auto";
 });
 
 function passwordElementYes(object){

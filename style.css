@@ -47,7 +47,7 @@ html {
   }
 /* wrapper div containing everything */
 
-  #wndw {
+#wndw {
       display: grid;
       grid-template-columns: minmax(380px, 1fr);
       grid-template-rows: 60px 117px 1fr 117px;
@@ -55,7 +55,7 @@ html {
       padding-right: 30px;
       padding-left: 30px;
       overflow: hidden;
-  }
+}
 
 /**************** HEADER *******************/
 header {
@@ -235,6 +235,7 @@ header {
 #title {
     font-size: 2.4rem;
     line-height: 1.1;
+    padding-top: 20px;
 }
 #desc {
     display: grid;
@@ -242,6 +243,8 @@ header {
     font-size: 1.4rem;
     line-height: 1.2;
     font-weight: 300;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 #desc a {
     font-size: 1.2rem;
@@ -273,7 +276,7 @@ label {
 form {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(9, 1fr);
+    grid-auto-rows: auto;
     place-items: center center;
     padding: 0;
     border: none;
@@ -403,6 +406,7 @@ input[type="checkbox"]:focus + label::before {
 #passwordMessage {
     padding-top: 20px;
     visibility: hidden;
+    height: 0;
 }
 
 #passwordMessage p {
@@ -431,4 +435,10 @@ input[type="checkbox"]:focus + label::before {
     font-size: 1.195rem;
     width: 90%;
     color: var(--error-color);
+}
+
+#passwordConfirmField {
+    visibility: hidden;
+    height: 0;
+    padding-top: 30px;
 }
