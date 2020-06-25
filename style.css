@@ -346,6 +346,8 @@ fieldset {
 font-size: 1.4rem;
 padding-top: 30px;
 padding-bottom: 30px;
+visibility: hidden;
+height: 0;
 }
 
 #label-sms-verify-text {
@@ -388,4 +390,4 @@ input[type="checkbox"]:checked + label:after {
 input[type="checkbox"]:focus + label::before {
       outline: rgb(59, 153, 252) auto 5px;
 }
-/******** START CUSTOM CHECKBOX */
+/******** END CUSTOM CHECKBOX */
