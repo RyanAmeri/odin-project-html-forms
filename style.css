@@ -442,3 +442,73 @@ input[type="checkbox"]:focus + label::before {
     height: 0;
     padding-top: 30px;
 }
+#buttonField {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+#sign-up-submit-btn {
+    background-color: var(--link-color);
+    border-radius: 4px;
+    border: 1px solid var(--main-color);
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.575rem;
+    line-height: 1.42;
+    width: 318px;
+    min-width: 100px;
+    height: 44px; 
+    cursor: pointer; 
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    display: inline-block;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.75);
+}
+#sign-up-submit-img {
+height: 1em;
+width: 0.8em;
+margin-top: 2px;
+margin-right: 4px;
+vertical-align: text-top;
+display: inline-block;
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAwCAMAAAClrpMkAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAC6UExURUdwTP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////3HoUvYAAAA9dFJOUwCrcV0ZYP6AMaL2lhCgWMgEKPEtUX9BqCfRDVU2y9X5OsDkAQbuFePEJC7TD7Q4E4QHfDD6DLJCell9Q8cCdpKaAAABLUlEQVQ4y92V13KDMBBFsWmxKe69995Lqv7/t3KFNQnIwsvkyZP7hI6ORmIXDZr2t1x85/p1dfzLQ2vnZNktWWcXr7Um7DeTVpyWtlg4VlqtmcHkRl8aS30TLDFVWokfrbsVo22XH7Kk8AaYmLs/Q3eO8eBeqwLPpiEwnYFU77wUaDlCyiApWcsXGVuNImi0YqyYl7w+FtsSs8H6EnsHe5XYJ5gv1xisILECmFzrCpghMQOsojiLyrP/nXfYZ5AGb2YmGt7yBn/YH+DpjI4udqRiP5HXy3m5Hu116mD1DuUN10FR10PCM8OX/oG3EN6C8JrCaxJeW3htwvOE5xGedXsR0yLrXAOrJekbWKL+jrVxIu/N/Xjm7y/OOybwjvBOZ1I7n4Jr/0LFSP4f/QY7TeMSyZCaMgAAAABJRU5ErkJggg==);
+background-size: contain;
+background-repeat: no-repeat;
+}
+#disclaim{
+font-size: 1.2rem;
+font-style: italic;
+color: #757575;
+padding-top: 20px;
+padding-bottom: 20px;
+width: 80%;
+justify-self: center; 
+text-align: center;
+margin-bottom: 20px;
+}
+
+fieldset:last-child {
+    background-color: var(--background-color);
+    padding: 20px 0;
+    margin-left: -43px;
+    padding-left: 43px;
+    margin-right: -43px;
+    padding-right: 43px;
+    margin-top: -20px;
+    padding-top: 20px;
+    margin-bottom: -20px;
+    padding-bottom: 20px;
+    
+}
+#captchaText {
+
+    place-self: center center;
+    font-size: 1rem;
+    color: #8d9096;
+    text-align: center;
+
+}

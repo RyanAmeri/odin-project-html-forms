@@ -104,13 +104,19 @@
             </div>
            </fieldset>
            <fieldset id="buttonField">
-               <button>Create Account</button>
+            <button id="sign-up-submit-btn" type="submit" name="SignUp" data-clicked-text="Creating ..." data-default-text="Create account">
+                <span id="sign-up-submit-img"></span>
+                <span id="sign-up-submit-btn-text">Create account</span>
+              </button>
            </fieldset>
-           <fieldset id="disclaim">
-
+           <fieldset id="disclaimField"> 
+               <div id="disclaim">By clicking Create account, you agree to our
+                <a href="https://www.mint.com/terms">Terms</a> and have read and acknowledge our <a href="https://security.intuit.com/privacy">Privacy Statement</a>.</div>
            </fieldset>
            <fieldset id="captcha">
-
+               <div id="captchaText">
+                Invisible reCAPTCHA by Google <a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a> and <a href="https://www.google.com/intl/en/policies/terms/">Terms of Use</a>.
+               </div>
            </fieldset>
         </form>
         </article>
