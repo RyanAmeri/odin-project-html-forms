@@ -229,13 +229,13 @@ header {
     background: white;
     border: 1px solid var(--border-color);
     width: 380px;
-    padding: 20px;
+    /* padding: 20px; */
     align-self: start;
 }
 #title {
     font-size: 2.4rem;
     line-height: 1.1;
-    padding-top: 20px;
+    padding-top: 35px;
 }
 #desc {
     display: grid;
@@ -243,7 +243,7 @@ header {
     font-size: 1.4rem;
     line-height: 1.2;
     font-weight: 300;
-    padding-top: 20px;
+    padding-top: 25px;
     padding-bottom: 20px;
 }
 #desc a {
@@ -336,12 +336,10 @@ fieldset {
 }
 
 #phoneError {
-    display: block; 
     text-align: left;
     padding: 5px 0;
     visibility: visible; 
     line-height: 1.5;
-    height: 20px;
     font-size: 1rem;
     color: #444;
 }
@@ -485,7 +483,6 @@ font-style: italic;
 color: #757575;
 padding-top: 20px;
 padding-bottom: 20px;
-width: 80%;
 justify-self: center; 
 text-align: center;
 margin-bottom: 20px;
@@ -494,15 +491,7 @@ margin-bottom: 20px;
 fieldset:last-child {
     background-color: var(--background-color);
     padding: 20px 0;
-    margin-left: -43px;
-    padding-left: 43px;
-    margin-right: -43px;
-    padding-right: 43px;
-    margin-top: -20px;
-    padding-top: 20px;
-    margin-bottom: -20px;
-    padding-bottom: 20px;
-    
+    width: 100%;
 }
 #captchaText {
 
